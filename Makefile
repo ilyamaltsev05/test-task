@@ -3,11 +3,15 @@ BUILD_DIR = build
 SOURCE_DIR = src
 RM = rm
 
-examples: kronecker_product matrices
+examples: make_directories kronecker_product matrices
 
 lint:
 	clang-tidy --config-file=.clang-tidy ./$(SOURCE_DIR)/kron_prod/*.c
 	clang-tidy --config-file=.clang-tidy ./$(SOURCE_DIR)/matrices/*.c
+
+make_directories:
+	mkdir -p ./$(BUILD_DIR)
+	mkdir -p ./$(BUILD_DIR)/examples
 
 kronecker_product: ./$(BUILD_DIR)/kron_prod_no_mask.o ./$(BUILD_DIR)/kron_prod_with_mask.o
 
