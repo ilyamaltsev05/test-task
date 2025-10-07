@@ -5,6 +5,10 @@ RM = rm
 
 examples: kronecker_product matrices
 
+lint:
+	clang-tidy --config-file=.clang-tidy ./$(SOURCE_DIR)/kron_prod/*.c
+	clang-tidy --config-file=.clang-tidy ./$(SOURCE_DIR)/matrices/*.c
+
 kronecker_product: ./$(BUILD_DIR)/kron_prod_no_mask.o ./$(BUILD_DIR)/kron_prod_with_mask.o
 
 matrices: simple_2x2 empty_diag_2x2
