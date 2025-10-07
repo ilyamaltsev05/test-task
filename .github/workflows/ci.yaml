@@ -7,5 +7,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run lint checks
         run: |
-          sudo apt-get clang
+          sudo apt-get update
+          sudo apt-get install clang
           make lint
