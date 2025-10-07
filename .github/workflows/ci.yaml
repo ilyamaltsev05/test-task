@@ -1,1 +1,19 @@
-
+name: Checks
+on: pull_request
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run lint checks
+        run: |
+          sudo apt-get update
+          sudo apt-get install libgraphblas-dev
+          sudo apt-get install libsuitesparse-dev
+          export C_PATH=/usr/local/include/suitesparse
+          export LIBRARY_PATH=/usr/local/lib
+          export LD_LIBRARY_PATH=/usr/local/lib
+          sudo apt-get install clang
+          sudo apt-get install bear
+          bear -- make examples
+          make lint
