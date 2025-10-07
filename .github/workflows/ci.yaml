@@ -9,9 +9,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install libsuitesparse-dev
-          sudo export C_PATH=/usr/local/include/suitesparse
-          sudo export LIBRARY_PATH=/usr/local/lib
-          sudo export LD_LIBRARY_PATH=/usr/local/lib
+          export C_PATH=/usr/local/include/suitesparse
+          export LIBRARY_PATH=/usr/local/lib
+          export LD_LIBRARY_PATH=/usr/local/lib
           sudo apt-get install clang
           sudo apt-get install bear
           bear -- make examples
