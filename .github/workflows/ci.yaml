@@ -8,6 +8,7 @@ jobs:
       - name: Run lint checks
         run: |
           sudo apt-get update
+          sudo apt-get install libgraphblas-dev
           sudo apt-get install libsuitesparse-dev
           export C_PATH=/usr/local/include/suitesparse
           export LIBRARY_PATH=/usr/local/lib
