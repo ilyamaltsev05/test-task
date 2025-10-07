@@ -34,7 +34,7 @@ empty_diag_2x2: ./$(BUILD_DIR)/examples/2x2_empty_diag_B_no_mask.out ./$(BUILD_D
 	-o ./$(BUILD_DIR)/examples/2x2_empty_diag_B_no_mask.out -I/usr/local/include/suitesparse -l:libgraphblas.so.10
 
 ./$(BUILD_DIR)/examples/2x2_empty_diag_B_with_mask.out: ./$(SOURCE_DIR)/matrices/2x2_empty_diag_B.c ./$(BUILD_DIR)/kron_prod_no_mask.o
-	$(COMPILER) ./$(SOURCE_DIR)/matrices/2x2_empty_diag_B.c ./$(BUILD_DIR)/kron_prod_no_mask.o \
+	$(COMPILER) ./$(SOURCE_DIR)/matrices/2x2_empty_diag_B.c ./$(BUILD_DIR)/kron_prod_with_mask.o \
 	-o ./$(BUILD_DIR)/examples/2x2_empty_diag_B_with_mask.out -I/usr/local/include/suitesparse -l:libgraphblas.so.10
 
 clean:

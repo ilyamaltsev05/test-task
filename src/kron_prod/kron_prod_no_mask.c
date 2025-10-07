@@ -1,4 +1,5 @@
 #include <GraphBLAS.h>
+#include <stdio.h>
 
 extern GrB_Info init_A(GrB_Matrix*);
 extern GrB_Info init_B(GrB_Matrix*);
