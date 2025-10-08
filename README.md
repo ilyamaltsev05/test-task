@@ -23,3 +23,22 @@ make run_all
 ~~~
 # Сравнение производительности
 Эксперимент проводился на машине со следующими характеристиками: Arch Linux, Intel Core i3-7020U (4), 2.30 GHz, DDR4 8GB RAM и Intel HD Graphics 620, 1.00 GHz.
+## Выделение памяти на куче
+### simple_2x2
+|      | Без маски | С маской |
+|------|---------|----------|
+| Allocations |       |
+| Allocated bytes |      |
+| Bytes used in peak |      |
+### empty_diag_2x2
+|      | Без маски | С маской |
+|------|---------|----------|
+| Allocations |       |
+| Allocated bytes |      |
+| Bytes used in peak |      |
+### 2x2_by_3x3
+|      | Без маски | С маской |
+|------|---------|----------|
+| Allocations |       |
+| Allocated bytes |      |
+| Bytes used in peak |      |
