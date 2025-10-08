@@ -23,6 +23,7 @@ int main() {
 	GrB_Matrix A;
 	GrB_Matrix B;
 	GrB_Matrix C;
+	GrB_Matrix M;
 
 	GrB_Info status_code = init_A(&A);
 	if (status_code) {
@@ -37,6 +38,12 @@ int main() {
 	}
 
 	status_code = init_C(&C);
+	if (status_code) {
+		fprintf(stderr, "%d\n", status_code);
+		return 1;
+	}
+
+	status_code = init_M(&M);
 	if (status_code) {
 		fprintf(stderr, "%d\n", status_code);
 		return 1;
