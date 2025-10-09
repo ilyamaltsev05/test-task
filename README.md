@@ -19,7 +19,7 @@ make clean
 
 Запустить все примеры:
 ~~~
-make run_all
+make run_examples
 ~~~
 # Сравнение производительности
 Эксперимент проводился на машине со следующими характеристиками: Arch Linux, Intel Core i3-7020U (4), 2.30 GHz, DDR4 8GB RAM и Intel HD Graphics 620, 1.00 GHz.
