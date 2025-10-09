@@ -25,9 +25,3 @@ GrB_Info import_matrix(char *path, GrB_Matrix *matrix) {
 
     return 0;
 }
-
-int main() {
-    GrB_init(1);
-    GrB_Matrix some;
-    return import_matrix("./some_matrix.sms", &some);
-}

@@ -10,6 +10,8 @@ run_all: examples
 	./$(BUILD_DIR)/examples/simple_2x2_with_mask.out
 	./$(BUILD_DIR)/examples/2x2_empty_diag_B_no_mask.out
 	./$(BUILD_DIR)/examples/2x2_empty_diag_B_with_mask.out
+	./$(BUILD_DIR)/examples/2x2_by_3x3_no_mask.out
+	./$(BUILD_DIR)/examples/2x2_by_3x3_with_mask.out
 
 lint:
 	clang-tidy --config-file=.clang-tidy ./$(SOURCE_DIR)/kron_prod/*.c
