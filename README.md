@@ -24,22 +24,31 @@ make run_all
 # Сравнение производительности
 Эксперимент проводился на машине со следующими характеристиками: Arch Linux, Intel Core i3-7020U (4), 2.30 GHz, DDR4 8GB RAM и Intel HD Graphics 620, 1.00 GHz.
 ## Выделение памяти на куче
-Данные получены с помощью Valgrind  и Massif.
+Данные получены с помощью Valgrind, Massif и heaptrack.
 ### simple_2x2
 |      | Без маски | С маской |
 |------|---------|----------|
 | Allocations |    76   | 109
 | Allocated bytes |  1,875,199    | 1,917,545
-| Mib used in peak |   1.8   |  1.8
 ### empty_diag_2x2
 |      | Без маски | С маской |
 |------|---------|----------|
 | Allocations |    76   | 111
 | Allocated bytes |  1,875,211    | 1,919,133
-| Mib used in peak |   1.8   |  1.8
 ### 2x2_by_3x3
 |      | Без маски | С маской |
 |------|---------|----------|
 | Allocations |    132   |  150
 | Allocated bytes |   1,955,901   | 1,991,087
-| Mib used in peak |   1.8   |  1.8
+### 9x9_by_42x42
+|      | Без маски | С маской |
+|------|---------|----------|
+| Allocations |    17,760   |  17,782
+| Allocated bytes |   36,640,113   | 36,684,419
+| Mib used in peak |   2.1   | 2.1
+### 200x200_by_150x150
+|      | Без маски | С маской |
+|------|---------|----------|
+| Allocations |   487239    |  487252
+| Mib used in peak |  25.9    | 26.4
+| Total runtime, seconds | 17  | 18 
